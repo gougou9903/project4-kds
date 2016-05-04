@@ -33,21 +33,25 @@
 #include "spi.h"
 
 static int i = 0;
-
+static uint8_t test = 0;
 int main(void)
 {
+	spi_init(SPI0_BASE_PTR);
+	uint8_t DATA = 0x01;
+	Nrf24l01_Init(1);
+	Nrf24l01_Init(2);
+	test = NRF24l01_Check();
 
-    /* Write your code here */
+//	while(1){
+//		NRF24L01_TXDATA[0] = ~DATA;
+//		TX_Mode(NRF24L01_TXDATA);
+//
+//		DATA << 1;
+//		if(DATA == 0) DATA = 0x01;
+//	}
 
-    /* This for loop should be replaced. By default this loop allows a single stepping. */
-    for (;;) {
-        i++;
-    }
-    /* Never leave main */
-    return 0;
+
+
 }
-////////////////////////////////////////////////////////////////////////////////
-// EOF
-////////////////////////////////////////////////////////////////////////////////
 
 

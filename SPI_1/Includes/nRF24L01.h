@@ -73,5 +73,9 @@ uint8_t NRF_Write_Reg(uint8_t reg, uint8_t value);
 uint8_t NRF_Read_Buf(uint8_t reg, uint8_t *pBuf, uint8_t uchars);
 uint8_t NRF_Write_Buf(uint8_t reg, uint8_t *pBuf, uint8_t len);
 uint8_t Nrf24l01_Check(void);
-
+void TX_Mode(uint8_t * BUF);
+void RX_Mode(uint8_t * BUF);
+void delay_ms(uint8_t x);
+uint8_t NRF24l01_Check(void);
+void Nrf24l01_Init(uint8_t model);
 #endif /* INCLUDES_NRF24L01_H_ */

@@ -1,6 +1,5 @@
 #include "Nordic.h"
 #include "nRF24L01.h"
-#include "spi.h"
 
 void csn(int mode)
 {
@@ -13,7 +12,7 @@ void ce(int level) {
 
 uint8_t read_register(uint8_t reg) {
 	csn(0);
-	transfer(reg);
+	SPI_tx_byte(reg);
 	uint8_t result = SPI_tx_byte(0xff);
 	csn(1);
 	return result;

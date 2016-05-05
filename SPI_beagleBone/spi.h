@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _SPI_BEAGELBONE_
+#define _SPI_BEAGELBONE_
 
 #include <stdint.h>
 #include <unistd.h>
@@ -21,4 +22,4 @@ void SPI_init();
 
 uint8_t SPI_tx_byte(uint8_t tx_);
 
-
+#endif

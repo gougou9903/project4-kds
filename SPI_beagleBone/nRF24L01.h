@@ -1,6 +1,10 @@
 #pragma once
 
-#include "RF24_config.h"
+#include "spi.h"
+#include "Nordic.h"
+#include "GPIO.h"
 
+uint8_t csn_pin=115;
+uint8_t ce_pin=117;
 
-void SPI_init(string device, uint8_t mode, uint8_t bits, uint32_t speed) {};
+void scn(int mode);

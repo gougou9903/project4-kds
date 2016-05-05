@@ -1,7 +1,7 @@
 #include "GPIO.h"
 #include <stdio.h>
 #include "Nordic.h"
-
+#include <stdint.h>
 
 void setup(void) {
 	SPI_init();

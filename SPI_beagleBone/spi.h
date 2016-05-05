@@ -16,7 +16,7 @@
 extern int fd ;
 extern uint8_t mode;
 extern uint8_t  bits;
-extern uint8_t  speed;
+extern uint32_t  speed;
 void SPI_init();
 
 uint8_t SPI_tx_byte(uint8_t tx_);

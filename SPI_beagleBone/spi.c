@@ -1,6 +1,11 @@
 #include "spi.h"
 
+uint8_t mode = 0 ;
 
+uint8_t bits = 8 ;
+
+uint32_t speed = 16000000;
+int fd = 0;
 
 void SPI_init() {
 	int ret = 0;

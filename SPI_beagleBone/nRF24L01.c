@@ -1,6 +1,7 @@
 #include "Nordic.h"
 #include "nRF24L01.h"
-
+uint8_t csn_pin =115;
+uint8_t ce_pin = 117;
 void csn(int mode)
 {
 	digitalWrite(csn_pin, mode);

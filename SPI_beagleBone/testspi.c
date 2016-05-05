@@ -9,8 +9,8 @@ void setup(void) {
 
 int main() {
 	void setup(void);
-	write_register(STATUS, 1);
-	uint8_t a = read_register(STATUS);
+	write_register(CONFIG, 1);
+	uint8_t a = read_register(CONFIG);
 	printf("%d", a);
 	return 0;
 }

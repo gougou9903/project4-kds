@@ -9,7 +9,7 @@ void setup(void) {
 
 int main() {
 	printf("de");
-	void setup(void);
+	 setup();
 	write_register(CONFIG, 1);
 	uint8_t a = read_register(CONFIG);
 	printf("%d", a);

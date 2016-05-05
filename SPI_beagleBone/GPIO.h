@@ -3,5 +3,5 @@
 
 #include <stdio.h>
 
-void pinMode(int port, int DDR) {};
-void digitalWrite(int port, int value) {};
+void pinMode(int port, int DDR);
+void digitalWrite(int port, int value) ;

@@ -61,11 +61,11 @@ uint8_t SPI_tx_byte(uint8_t tx_) {
 	uint8_t tx[] = { 0 };
 	tx[0] = tx_;
 
-	uint8_t rx[] = { 0 };
+	uint8_t rx[ARRAY_SIZE(tx)] = { 0 };
 	struct spi_ioc_transfer tr;
 	tr.tx_buf = (unsigned long)tx;
 	tr.rx_buf = (unsigned long)rx;
-	tr.len = 1;
+	tr.len = ARRAY_SIZE(tx);
 	tr.delay_usecs = 0;
 	tr.cs_change = 1;
 	tr.speed_hz = speed;

@@ -14,7 +14,7 @@ void pinMode(int port, int DDR) {
 	fclose(f);
 }
 
-void digitalWrite write(int port, int value) {
+void digitalWrite(int port, int value) {
 	FILE *f;
 
 	char file[128];

@@ -10,7 +10,19 @@ void csn(int mode)
 void ce(int level) {
 	digitalWrite(ce_pin, level);
 }
+uint8_t read_register(uint8_t reg, uint8_t* buf, uint8_t len)
+{
+  uint8_t status;
 
+  csn(LOW);
+  status = spi->transfer( R_REGISTER | ( REGISTER_MASK & reg ) );
+  while ( len-- )
+    *buf++ = spi->transfer(0xff);
+
+  csn(HIGH);
+
+  return status;
+}
 //read data from the register
 uint8_t read_register(uint8_t reg) {
 	csn(0);

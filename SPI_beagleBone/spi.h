@@ -13,10 +13,10 @@
 #include <linux/spi/spidev.h>
 
 #define device "/dev/spidev1.0"
-int fd = 0;
-uint8_t mode;
-uint8_t  bits=8;
-uint8_t  speed=16000000;
+extern int fd ;
+extern uint8_t mode;
+extern uint8_t  bits;
+extern uint8_t  speed;
 void SPI_init();
 
 uint8_t SPI_tx_byte(uint8_t tx_);

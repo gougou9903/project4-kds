@@ -12,18 +12,18 @@ void ce(int level) {
 }
 
 uint8_t read_register(uint8_t reg) {
-	csn(LOW);
+	csn(0);
 	spi->transfer(reg);
 	uint8_t result = SPI_tx_byte(0xff);
-	csn(HIGH);
+	csn(1);
 	return result;
 }
 
 uint8_t write_register(uint8_t reg, uint8_t value) {
 	uint8_t status;
-	csn(LOW);
+	csn(0);
 	status = SPI_tx_byte(reg);
-	csn(HIGH);
+	csn(1);
 
 	return status;
 }

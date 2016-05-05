@@ -4,13 +4,14 @@ uint8_t csn_pin =115;
 uint8_t ce_pin = 117;
 void csn(int mode)
 {
-	digitalWrite(csn_pin, mode);
+	//digitalWrite(csn_pin, mode);
 }
 
 void ce(int level) {
 	digitalWrite(ce_pin, level);
 }
 
+//read data from the register
 uint8_t read_register(uint8_t reg) {
 	csn(0);
 	SPI_tx_byte(reg);
@@ -18,7 +19,7 @@ uint8_t read_register(uint8_t reg) {
 	csn(1);
 	return result;
 }
-
+//write data to the register 
 uint8_t write_register(uint8_t reg, uint8_t value) {
 	uint8_t status;
 	csn(0);

@@ -1,4 +1,4 @@
-#include"gpio.h"
+#include"GPIO.h"
 
 void pinMode(int port, int DDR) {
 	FILE *f;

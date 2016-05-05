@@ -12,6 +12,8 @@
 #include <linux/types.h>
 #include <linux/spi/spidev.h>
 
+#define ARRAY_SIZE(a) (sizeof(a) / sizeof((a)[0]))
+
 #define device "/dev/spidev1.0"
 extern int fd ;
 extern uint8_t mode;
